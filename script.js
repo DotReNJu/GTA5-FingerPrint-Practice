@@ -20,14 +20,14 @@ var sIndexs = [
     0, 0
 ];
 var sSum = 0;
-
+var tImg = 1;
 //키입력
 window.document.body.onkeydown = function (e) {
     try {
         // 이벤트를 정규화한뒤 기본 동작을 막는다.
         e = e || window.event;
         if (e.preventDefault) {
-            //e.preventDefault();
+            e.preventDefault();
         }
         else {
             e.returnValue = false;
@@ -36,33 +36,25 @@ window.document.body.onkeydown = function (e) {
         switch (e.keyCode) {
             case 87:
             case 38:
-                document.title = "상";
                 tIndex = (tIndex - 2 + 8) % 8;
                 break;
             case 83:
             case 40:
-                document.title = "하";
                 tIndex = (tIndex + 2 + 8) % 8;
                 break;
             case 65:
             case 37:
-                document.title = "좌";
                 tIndex = (tIndex - 1 + 8) % 8;
                 break;
             case 68:
             case 39:
-                document.title = "우";
                 tIndex = (tIndex + 1 + 8) % 8;
                 break;
             case 13:
-                document.title = "선택";
                 break;
             case 9:
-                document.title = "확인";
                 break;
         }
-        document.title += "" + tIndex;
-
         //기본틀영역 색칠
         for(i=0;i<8;i++){
             document.getElementById("a"+i).style.borderColor="gray";
