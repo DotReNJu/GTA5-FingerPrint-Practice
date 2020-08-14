@@ -1,8 +1,9 @@
+//우클 드래그 방지
 window.document.oncontextmenu = new Function("return false");
 window.document.onselectstart = new Function("return false");
 window.document.ondragstart = new Function("return false");
-
 var selectIndex=0;
+
 document.body.onkeydown = function (e) {
     try {
         // 이벤트를 정규화한뒤 기본 동작을 막는다.
