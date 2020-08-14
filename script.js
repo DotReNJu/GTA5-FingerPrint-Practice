@@ -21,7 +21,8 @@ document.body.onkeydown = function (e) {
         //우:68(d),39
         //선택:13(enter)
         //확인:9(tab)
-        document.getElementsByName("body").style.backgroundImage="model/f1.png";
+        document.body.style.backgroundImage="url('../model/f1.png')";
+        
 
     }
     catch (catchID) {

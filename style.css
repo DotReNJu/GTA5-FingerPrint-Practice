@@ -1,5 +1,7 @@
 body{
     background-color:rgba(30,30,30);
+    background-repeat:no-repeat;
+    background-size:auto 800px;
 }
 
 table{
@@ -16,6 +18,7 @@ table td{
     padding:50px 50px;
     word-break:normal;
 }
+
 
 table td{
     text-align:left;
