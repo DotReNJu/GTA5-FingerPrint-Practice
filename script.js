@@ -13,14 +13,15 @@ var tStatus = -1;
 //1:정답공개됨
 
 var tIndex = 0;
-var sIndexs = [
+var sIndex = [
     0, 0,
     0, 0,
     0, 0,
     0, 0
 ];
-var sSum = 0;
 var tImg = 1;
+
+
 //키입력
 window.document.body.onkeydown = function (e) {
     try {
@@ -51,20 +52,31 @@ window.document.body.onkeydown = function (e) {
                 tIndex = (tIndex + 1 + 8) % 8;
                 break;
             case 13:
+                sIndex[tIndex]=sIndex[tIndex]?0:1;
                 break;
             case 9:
                 break;
         }
-        //기본틀영역 색칠
+        
         for(i=0;i<8;i++){
+            //기본틀영역 색칠
             document.getElementById("a"+i).style.borderColor="gray";
+            //선택인덱스 색칠
+            if(sIndex[i]){
+                document.getElementById("a"+i).style.backgroundColor="white";
+            }
+            else{
+                document.getElementById("a"+i).style.backgroundColor="transparent";
+            }
         }
         //포커싱인덱스 색칠
         document.getElementById("a"+tIndex).style.borderColor="yellow";
-
-
+        
     }
     catch (catchID) {
         alert("펑");
     }
+}
+window.document.body.onload = function(){
+    
 }
