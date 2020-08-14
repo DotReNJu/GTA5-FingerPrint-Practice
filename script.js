@@ -4,7 +4,7 @@ window.document.onselectstart = new Function("return false");
 window.document.ondragstart = new Function("return false");
 
 //배경이미지
-document.body.style.backgroundImage = "url('../model/f1.png')";
+document.body.style.backgroundImage = "url('https://github.com/RepofKorDHK/GTA5FingerPrint/blob/master/model/f1.png?raw=true')";
 
 //해당인덱스
 var tStatus = -1;
@@ -84,7 +84,7 @@ window.document.body.onkeydown = function (e) {
         document.getElementById("a" + tIndex).style.borderColor = "yellow";
 
         //배경바꾸기
-        document.body.style.backgroundImage = "url('../model/f"+(tImg+1)+".png')";
+        document.body.style.backgroundImage = "url('https://github.com/RepofKorDHK/GTA5FingerPrint/blob/master/model/f"+(tImg+1)+".png?raw=true')";
     }
     catch (catchID) {
         alert("펑");
