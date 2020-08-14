@@ -21,7 +21,7 @@ document.body.onkeydown = function (e) {
         //우:68(d),39
         //선택:13(enter)
         //확인:9(tab)
-document.getElementById('a0').style.backgroundImage="url('https://t1.daumcdn.net/cfile/tistory/2060F43D5053EBE21D')";
+document.getElementById('a0').style.backgroundImage="model/f1.png";
 
     }
     catch (catchID) {
