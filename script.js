@@ -19,7 +19,7 @@ var sIndex = [
     0, 0,
     0, 0
 ];
-var tImg = 1;
+var tImg = 0;
 
 
 //키입력
@@ -52,31 +52,44 @@ window.document.body.onkeydown = function (e) {
                 tIndex = (tIndex + 1 + 8) % 8;
                 break;
             case 13:
-                sIndex[tIndex]=sIndex[tIndex]?0:1;
+                sIndex[tIndex] = sIndex[tIndex] ? 0 : 1;
                 break;
             case 9:
                 break;
+            case 33:
+                tImg = (tImg + 1 + 4) % 4;
+                tIndex=0;
+                sIndex=[0,];
+                break;
+            case 34:
+                tImg = (tImg - 1 + 4) % 4;
+                tIndex=0;
+                sIndex=[0,];
+                break;
         }
-        
-        for(i=0;i<8;i++){
+
+        //색칠하기
+        for (i = 0; i < 8; i++) {
             //기본틀영역 색칠
-            document.getElementById("a"+i).style.borderColor="gray";
+            document.getElementById("a" + i).style.borderColor = "gray";
             //선택인덱스 색칠
-            if(sIndex[i]){
-                document.getElementById("a"+i).style.backgroundColor="white";
+            if (sIndex[i]) {
+                document.getElementById("a" + i).style.backgroundColor = "gray";
             }
-            else{
-                document.getElementById("a"+i).style.backgroundColor="transparent";
+            else {
+                document.getElementById("a" + i).style.backgroundColor = "transparent";
             }
         }
         //포커싱인덱스 색칠
-        document.getElementById("a"+tIndex).style.borderColor="yellow";
-        
+        document.getElementById("a" + tIndex).style.borderColor = "yellow";
+
+        //배경바꾸기
+        document.body.style.backgroundImage = "url('../model/f"+(tImg+1)+".png')";
     }
     catch (catchID) {
         alert("펑");
     }
 }
-window.document.body.onload = function(){
-    
+window.document.body.onload = function () {
+    window.document.body.onkeydown;
 }
