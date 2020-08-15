@@ -34,7 +34,6 @@ window.document.body.onkeydown = function (e) {
             e.returnValue = false;
         }
         //어떤키인지 구분
-        document.title=e.keyCode;
         switch (e.keyCode) {
             case 87:
             case 38:
@@ -57,9 +56,9 @@ window.document.body.onkeydown = function (e) {
                 break;
             case 9:
                 while (true) {
-                    var tmp = Math.floor(Math.random() * 4);
-                    if (tImg != tmp) {
-                        tImg = tmp;
+                    var rtmp = Math.floor(Math.random() * 4);
+                    if (tImg != rtmp) {
+                        tImg = rtmp;
                         tIndex = 0;
                         sIndex = [0,];
                         break;
@@ -82,19 +81,9 @@ window.document.body.onkeydown = function (e) {
         }
 
         //색칠하기
-        for (i = 0; i < 8; i++) {
-            //기본틀영역 색칠
-            document.getElementById("a" + i).style.borderColor = "gray";
-            //선택인덱스 색칠
-            if (sIndex[i]) {
-                document.getElementById("a" + i).style.backgroundColor = "gray";
-            }
-            else {
-                document.getElementById("a" + i).style.backgroundColor = "transparent";
-            }
-        }
+       aPaint();
         //포커싱인덱스 색칠
-        document.getElementById("a" + tIndex).style.borderColor = "yellow";
+        bPaint();
 
         //배경바꾸기
         document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/RepofKorDHK/GTA5FingerPrint/master/model/f" + (tImg + 1) + ".png')";
@@ -103,6 +92,29 @@ window.document.body.onkeydown = function (e) {
         alert("알수없는 오류로 터졌습니다. 개발자는 열일하세요");
     }
 }
+//마우스좌클릭도 엔터와 동일
 window.document.body.onload = function () {
-    window.document.body.onkeydown;
+    var wtf=window.document;
+    wtf.onmousedown=function(){
+        sIndex[tIndex] = sIndex[tIndex] ? 0 : 1;
+        aPaint();
+        bPaint();
+    };
+}
+
+function aPaint(){
+    for (i = 0; i < 8; i++) {
+        //기본틀영역 색칠
+        document.getElementById("a" + i).style.borderColor = "gray";
+        //선택인덱스 색칠
+        if (sIndex[i]) {
+            document.getElementById("a" + i).style.backgroundColor = "gray";
+        }
+        else {
+            document.getElementById("a" + i).style.backgroundColor = "transparent";
+        }
+    }
+}
+function bPaint(){
+    document.getElementById("a" + tIndex).style.borderColor = "yellow";
 }
