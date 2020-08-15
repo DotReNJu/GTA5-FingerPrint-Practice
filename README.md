@@ -1,11 +1,12 @@
-# GTA5-FingerPrint-Practice
+# GTA5-FingerPrint-Practice V 0.3
 [Github Link](https://github.com/RepofKorDHK/GTA5-FingerPrint-Practice)<br>
 [Site Link](https://repofkordhk.github.io/GTA5-FingerPrint-Practice/)<br>
-# Key
+# Key | 키
 WASD<br>
-Enter<br>
+Enter,Mouse Left<br>
 PageUp<br>
 PageDown<br>
+Tab<br>
 # Developer
 practice GTA5 FingerPrint<br>
 Creator : DotReNJu<br>
