@@ -6,11 +6,9 @@ body{
 }
 
 table{
-    /*border-collapse:collapse;*/
     border-spacing:5px;
     margin-left:339px;
     margin-top:188px
-    
 }
 table td{
     border-color:white;
@@ -21,8 +19,7 @@ table td{
     overflow:hidden;
     padding:50px 50px;
     word-break:normal;
-}
-table td{
+
     text-align:left;
     vertical-align:top;
     background-repeat:no-repeat;
