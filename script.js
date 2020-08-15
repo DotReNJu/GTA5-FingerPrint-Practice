@@ -60,6 +60,8 @@ window.document.body.onkeydown = function (e) {
                     if (tImg != tmp) {
                         tImg = tmp;
                         document.title=tImg+"";
+                        tIndex = 0;
+                        sIndex = [0,];
                         break;
                     }
                 }
