@@ -34,6 +34,7 @@ window.document.body.onkeydown = function (e) {
             e.returnValue = false;
         }
         //어떤키인지 구분
+        document.title=e.keyCode;
         switch (e.keyCode) {
             case 87:
             case 38:
@@ -59,7 +60,6 @@ window.document.body.onkeydown = function (e) {
                     var tmp = Math.floor(Math.random() * 4);
                     if (tImg != tmp) {
                         tImg = tmp;
-                        document.title = tImg + "";
                         tIndex = 0;
                         sIndex = [0,];
                         break;
@@ -75,6 +75,9 @@ window.document.body.onkeydown = function (e) {
                 tImg = (tImg + 1 + 4) % 4;
                 tIndex = 0;
                 sIndex = [0,];
+                break;
+            case 27:
+                window.confirm("이 창을 닫을까용?")?window.close():0;
                 break;
         }
 
