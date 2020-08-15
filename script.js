@@ -59,6 +59,7 @@ window.document.body.onkeydown = function (e) {
                     var tmp = Math.floor(Math.random() * 4);
                     if (tImg != tmp) {
                         tImg = tmp;
+                        document.title=tImg+"";
                         break;
                     }
                 }
