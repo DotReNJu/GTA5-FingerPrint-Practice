@@ -59,7 +59,7 @@ window.document.body.onkeydown = function (e) {
                     var tmp = Math.floor(Math.random() * 4);
                     if (tImg != tmp) {
                         tImg = tmp;
-                        document.title=tImg+"";
+                        document.title = tImg + "";
                         tIndex = 0;
                         sIndex = [0,];
                         break;
@@ -67,12 +67,12 @@ window.document.body.onkeydown = function (e) {
                 }
                 break;
             case 33:
-                tImg = (tImg + 1 + 4) % 4;
+                tImg = (tImg - 1 + 4) % 4;
                 tIndex = 0;
                 sIndex = [0,];
                 break;
             case 34:
-                tImg = (tImg - 1 + 4) % 4;
+                tImg = (tImg + 1 + 4) % 4;
                 tIndex = 0;
                 sIndex = [0,];
                 break;
@@ -97,7 +97,7 @@ window.document.body.onkeydown = function (e) {
         document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/RepofKorDHK/GTA5FingerPrint/master/model/f" + (tImg + 1) + ".png')";
     }
     catch (catchID) {
-        alert("펑");
+        alert("알수없는 오류로 터졌습니다. 개발자는 열일하세요");
     }
 }
 window.document.body.onload = function () {
