@@ -55,16 +55,23 @@ window.document.body.onkeydown = function (e) {
                 sIndex[tIndex] = sIndex[tIndex] ? 0 : 1;
                 break;
             case 9:
+                while (true) {
+                    var tmp = Math.floor(Math.random() * 4);
+                    if (tImg != tmp) {
+                        tImg = tmp;
+                        break;
+                    }
+                }
                 break;
             case 33:
                 tImg = (tImg + 1 + 4) % 4;
-                tIndex=0;
-                sIndex=[0,];
+                tIndex = 0;
+                sIndex = [0,];
                 break;
             case 34:
                 tImg = (tImg - 1 + 4) % 4;
-                tIndex=0;
-                sIndex=[0,];
+                tIndex = 0;
+                sIndex = [0,];
                 break;
         }
 
@@ -84,7 +91,7 @@ window.document.body.onkeydown = function (e) {
         document.getElementById("a" + tIndex).style.borderColor = "yellow";
 
         //배경바꾸기
-        document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/RepofKorDHK/GTA5FingerPrint/master/model/f"+(tImg+1)+".png')";
+        document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/RepofKorDHK/GTA5FingerPrint/master/model/f" + (tImg + 1) + ".png')";
     }
     catch (catchID) {
         alert("펑");
