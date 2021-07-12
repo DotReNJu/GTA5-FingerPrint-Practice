@@ -106,19 +106,19 @@ function aPaint(){
     for (i = 0; i < 8; i++) {
         //기본틀영역 색칠
         //document.getElementById("a" + i).style.borderColor = "gray";
-        document.querySelector(`a{i}`).style.borderColor = "gray";
+        document.querySelector(`a${i}`).style.borderColor = "gray";
         //선택인덱스 색칠
         if (sIndex[i]) {
             //document.getElementById("a" + i).style.backgroundColor = "gray";
-            document.querySelector(`a{i}`).style.borderColor = "gray";
+            document.querySelector(`a${i}`).style.borderColor = "gray";
         }
         else {
             //document.getElementById("a" + i).style.backgroundColor = "transparent";
-            document.querySelector(`a{i}`).style.borderColor = "transparent";
+            document.querySelector(`a${i}`).style.borderColor = "transparent";
         }
     }
 }
 function bPaint(){
     //document.getElementById("a" + tIndex).style.borderColor = "yellow";
-    document.querySelector(`a{i}`).style.borderColor = "yellow";
+    document.querySelector(`a${i}`).style.borderColor = "yellow";
 }
