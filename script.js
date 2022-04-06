@@ -76,8 +76,9 @@ window.document.body.onkeydown = function (e) {
                 sIndex = [0,];
                 break;
             case 27:
-                if(window.confirm("이 창을 닫을까?"))
+                if(window.confirm("이 창을 닫을지 고민?"))
                 {
+                    alert("닫아질까?");
                     window.open('', '_self', '');
                     window.close();
                 }
