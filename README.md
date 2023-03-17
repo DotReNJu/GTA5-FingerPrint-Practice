@@ -1,6 +1,6 @@
 # GTA5-FingerPrint-Practice V0.3
 [Github Link](https://github.com/RepofKorDHK/GTA5-FingerPrint-Practice)<br>
-[Site Link](https://dotrenju.github.io/GTA5-FingerPrint-Practice/)<br>
+[Site Link](https://gitdonghun.github.io/GTA5-FingerPrint-Practice/)<br>
 # Key|키
 WASD<br>
 Enter,Mouse Left<br>
