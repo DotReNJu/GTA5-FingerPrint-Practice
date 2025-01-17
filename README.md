@@ -10,5 +10,7 @@ Tab<br>
 # Developer|개발자
 practice GTA5 FingerPrint<br>
 Creator : GitDongHun<br>
+# Language|언어
+HTML / CSS / JS
 # Studing|공부
 [Link](https://www.zerocho.com/category/JavaScript/post/57432d2aa48729787807c3fc)<br>
